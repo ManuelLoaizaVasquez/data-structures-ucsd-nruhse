@@ -33,7 +33,7 @@ int main() {
 
         if (next == ')' || next == ']' || next == '}') {
             // Process closing bracket, write your code here
-            if (opening_brackets_stack.size() == 0) {
+            if (opening_brackets_stack.empty()) {
                 mistake = position;
                 break;
             } else {
@@ -49,7 +49,7 @@ int main() {
 
     // Printing answer, write your code here
     if (mistake == -1) {
-        if (opening_brackets_stack.size() == 0) cout << "Success" << endl;
+        if (opening_brackets_stack.empty()) cout << "Success" << endl;
         else {
             mistake = opening_brackets_stack.top().position + 1;
             cout << mistake << endl;
