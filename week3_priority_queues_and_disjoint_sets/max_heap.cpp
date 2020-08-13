@@ -11,12 +11,12 @@ struct MaxHeap {
     MaxHeap() {
         max_size = N;
         size = 0;
-        heap = new int[N];
+        heap = new int[N + 1];
     }
     MaxHeap(int n) {
         max_size = n;
         size = 0;
-        heap = new int[max_size];
+        heap = new int[max_size + 1];
     }
 
     int parent(int current) {
